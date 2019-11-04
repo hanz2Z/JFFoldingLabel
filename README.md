@@ -11,7 +11,7 @@ JFFoldingLabel可以按照客户端设置的行数来折叠文本，以及通过
 ### carthage
 
       1. Add MBProgressHUD to your Cartfile. e.g., github "hanz2Z/JFFoldingLabel" ~> 1.1.0
-      2. Run carthage up
+      2. Run carthage update
 
 ## Usage
 
