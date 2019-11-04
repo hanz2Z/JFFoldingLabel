@@ -368,7 +368,7 @@
                 if (self.canBeFolded) {
                     if (self.folded) {
                         CGFloat width = CTLineGetTypographicBounds(line, NULL, NULL, NULL);
-                        if ((width + self.unfoldButton.frame.size.width + 5) > self.frame.size.width) {
+                        if ((width + self.unfoldButton.frame.size.width + 5 + 15) > self.frame.size.width) {
                             CFRange lineRange = CTLineGetStringRange(line);
                             NSInteger length = lineRange.length-4;
                             if (length < 0) {
@@ -387,7 +387,19 @@
                             CFRelease(newLine);
                         }
                         else {
-                            CTLineDraw(line, context);
+                            CFRange lineRange = CTLineGetStringRange(line);
+
+                            NSString *subStr = [self.text substringWithRange:NSMakeRange(lineRange.location, lineRange.length)];
+                            subStr = [subStr stringByAppendingString:@"..."];
+
+                            NSAttributedString *subAttrStr = [[NSAttributedString alloc] initWithString:subStr attributes:@{
+                                                                                                                            NSForegroundColorAttributeName:self.textColor,
+                                                                                                                            NSFontAttributeName:self.font}];
+                            CTLineRef newLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) subAttrStr);
+
+                            CTLineDraw(newLine, context);
+
+                            CFRelease(newLine);
                         }
                         
                         CGSize size = self.unfoldButton.frame.size;

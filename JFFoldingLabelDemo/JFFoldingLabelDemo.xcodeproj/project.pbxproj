@@ -15,7 +15,7 @@
 		3CB0CBB5236C21E20062A5E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0CBB4236C21E20062A5E8 /* main.m */; };
 		3CB0CBBF236C21E20062A5E8 /* JFFoldingLabelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0CBBE236C21E20062A5E8 /* JFFoldingLabelDemoTests.m */; };
 		3CB0CBCA236C21E20062A5E8 /* JFFoldingLabelDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0CBC9236C21E20062A5E8 /* JFFoldingLabelDemoUITests.m */; };
-		3CB0CBDA236C2A9A0062A5E8 /* JFFoldingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0CBD9236C2A9A0062A5E8 /* JFFoldingLabel.framework */; };
+		3CB0CBDE236FD91B0062A5E8 /* JFFoldingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB0CBDD236FD91B0062A5E8 /* JFFoldingLabel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		3CB0CBC5236C21E20062A5E8 /* JFFoldingLabelDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFFoldingLabelDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB0CBC9236C21E20062A5E8 /* JFFoldingLabelDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFFoldingLabelDemoUITests.m; sourceTree = "<group>"; };
 		3CB0CBCB236C21E20062A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB0CBD9236C2A9A0062A5E8 /* JFFoldingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JFFoldingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB0CBDD236FD91B0062A5E8 /* JFFoldingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JFFoldingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB0CBDA236C2A9A0062A5E8 /* JFFoldingLabel.framework in Frameworks */,
+				3CB0CBDE236FD91B0062A5E8 /* JFFoldingLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +139,7 @@
 		3CB0CBD8236C2A9A0062A5E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3CB0CBD9236C2A9A0062A5E8 /* JFFoldingLabel.framework */,
+				3CB0CBDD236FD91B0062A5E8 /* JFFoldingLabel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -450,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6S7VM347S;
 				INFOPLIST_FILE = JFFoldingLabelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6S7VM347S;
 				INFOPLIST_FILE = JFFoldingLabelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
