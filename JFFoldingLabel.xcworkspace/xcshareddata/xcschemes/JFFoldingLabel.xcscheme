@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CB0CBA1236C21D40062A5E8"
-               BuildableName = "JFFoldingLabelDemo.app"
-               BlueprintName = "JFFoldingLabelDemo"
-               ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
+               BlueprintIdentifier = "3CB0CB73236989E50062A5E8"
+               BuildableName = "JFFoldingLabel.framework"
+               BlueprintName = "JFFoldingLabel"
+               ReferencedContainer = "container:JFFoldingLabel/JFFoldingLabel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CB0CBB9236C21E20062A5E8"
-               BuildableName = "JFFoldingLabelDemoTests.xctest"
-               BlueprintName = "JFFoldingLabelDemoTests"
-               ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CB0CBC4236C21E20062A5E8"
-               BuildableName = "JFFoldingLabelDemoUITests.xctest"
-               BlueprintName = "JFFoldingLabelDemoUITests"
-               ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
+               BlueprintIdentifier = "3CB0CB7C236989E50062A5E8"
+               BuildableName = "JFFoldingLabelTests.xctest"
+               BlueprintName = "JFFoldingLabelTests"
+               ReferencedContainer = "container:JFFoldingLabel/JFFoldingLabel.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CB0CBA1236C21D40062A5E8"
-            BuildableName = "JFFoldingLabelDemo.app"
-            BlueprintName = "JFFoldingLabelDemo"
-            ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
+            BlueprintIdentifier = "3CB0CB73236989E50062A5E8"
+            BuildableName = "JFFoldingLabel.framework"
+            BlueprintName = "JFFoldingLabel"
+            ReferencedContainer = "container:JFFoldingLabel/JFFoldingLabel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -71,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CB0CBA1236C21D40062A5E8"
-            BuildableName = "JFFoldingLabelDemo.app"
-            BlueprintName = "JFFoldingLabelDemo"
-            ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
+            BlueprintIdentifier = "3CB0CB73236989E50062A5E8"
+            BuildableName = "JFFoldingLabel.framework"
+            BlueprintName = "JFFoldingLabel"
+            ReferencedContainer = "container:JFFoldingLabel/JFFoldingLabel.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3CB0CBA1236C21D40062A5E8"
-            BuildableName = "JFFoldingLabelDemo.app"
-            BlueprintName = "JFFoldingLabelDemo"
-            ReferencedContainer = "container:JFFoldingLabelDemo.xcodeproj">
+            BlueprintIdentifier = "3CB0CB73236989E50062A5E8"
+            BuildableName = "JFFoldingLabel.framework"
+            BlueprintName = "JFFoldingLabel"
+            ReferencedContainer = "container:JFFoldingLabel/JFFoldingLabel.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
