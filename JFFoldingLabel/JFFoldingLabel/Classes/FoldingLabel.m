@@ -53,7 +53,7 @@
     self.textColor = [UIColor blackColor];
     self.font = [UIFont systemFontOfSize:10];
     self.lineSpacing = 5;
-    self.numberOfLinesWhenFolded = 3;
+    self.numberOfLinesWhenFolded = 5;
     self.foldText = @"收起";
     self.unfoldText = @"更多";
 }
@@ -178,7 +178,7 @@
 
 - (void)updateUnfoldButton
 {
-    self.unfoldButton.text = self.foldText;
+    self.unfoldButton.text = self.unfoldText;
     self.unfoldButton.font = self.font;
     
     CGSize size = [self.unfoldText sizeWithAttributes:@{
@@ -257,13 +257,19 @@
                                                      CGSizeMake(self.viewWidth, 1024), NULL);
         
         CGFloat lineSpacing = (self.numberOfLinesWhenFolded - 1) * self.lineSpacing;
-        CGFloat foldingHeight = (self.font.ascender - self.font.descender + 1) * self.numberOfLinesWhenFolded + lineSpacing;
+        CGFloat lineHeight = self.font.ascender - self.font.descender + 1;
+        CGFloat foldingHeight = lineHeight * self.numberOfLinesWhenFolded + lineSpacing;
         
         if (textFullSize.height > foldingHeight) {
             self.canBeFolded = YES;
             
             if (self.folded) {
-                size = CGSizeMake(self.viewWidth, foldingHeight);
+                CGSize foldedSize = CTFramesetterSuggestFrameSizeWithConstraints(self.textFrameSetter,
+                                                             CFRangeMake(0, self.text.length),
+                                                             NULL,
+                                                             CGSizeMake(self.viewWidth, foldingHeight), NULL);
+                
+                size = CGSizeMake(self.viewWidth, foldedSize.height);
                 
                 self.unfoldButton.hidden = NO;
                 self.foldButton.hidden = YES;
@@ -308,6 +314,7 @@
         }
     }
     
+    size.height = ceilf(size.height);
     return size;
 }
 
@@ -404,7 +411,7 @@
                         
                         CGSize size = self.unfoldButton.frame.size;
                         self.unfoldButton.frame = CGRectMake(self.frame.size.width - size.width - 5,
-                                                             self.frame.size.height - size.height + self.font.descender,
+                                                             self.frame.size.height - p.y - size.height - self.font.descender,
                                                              size.width,
                                                              size.height);
                     }
@@ -414,7 +421,7 @@
                         if (!self.foldButtonOnSeparatorLine) {
                             CGSize size = self.foldButton.frame.size;
                             self.foldButton.frame = CGRectMake(self.frame.size.width - size.width - 5,
-                                                                 self.frame.size.height - size.height + self.font.descender,
+                                                                 self.frame.size.height - size.height,
                                                                  size.width,
                                                                  size.height);
                         }
@@ -429,7 +436,7 @@
         if (self.canBeFolded && !self.folded && self.foldButtonOnSeparatorLine) {
             CGSize size = self.foldButton.frame.size;
             self.foldButton.frame = CGRectMake(0,
-                                               self.frame.size.height - size.height + self.font.descender,
+                                               self.frame.size.height - size.height,
                                                size.width,
                                                size.height);
         }
